@@ -14,5 +14,11 @@ Tujuan project ini: membantu teknisi memahami data vibrasi, MCSA, DGA, dan membu
 ---
 
 ## 📂 Struktur Folder
+chatbot-pdm/
+│── data/ # Dataset & dokumen (PDF, CSV, dll.)
+│── intents.json # Daftar intent & jawaban chatbot
+│── chatbot.py # Main script chatbot CLI
+│── requirements.txt # Daftar dependencies Python
+│── README.md # Dokumentasi project
 
 
