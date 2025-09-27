@@ -1,0 +1,123 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Good day",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "Hey",
+        "Halo",
+        "Hai",
+        "Selamat pagi",
+        "Selamat siang",
+        "Selamat sore"
+      ],
+      "responses": [
+        "Halo! Saya RizBot, asisten PdM Anda. Bagaimana saya bisa membantu?",
+        "Selamat datang! Saya siap membantu analisis Predictive Maintenance.",
+        "Hi! Ada yang bisa saya bantu terkait perawatan prediktif?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Selamat tinggal",
+        "Sampai jumpa",
+        "Thanks"
+      ],
+      "responses": [
+        "Selamat tinggal! Jaga peralatan dengan baik!",
+        "Sampai jumpa! Semoga analisis PdM membantu.",
+        "Terima kasih! Hubungi saya kapan saja untuk analisis maintenance."
+      ]
+    },
+    {
+      "tag": "vibration_analysis",
+      "patterns": [
+        "vibration analysis",
+        "analisis vibrasi",
+        "getaran mesin",
+        "vibration data",
+        "machine vibration",
+        "bearing vibration",
+        "motor vibration"
+      ],
+      "responses": [
+        "Analisis vibrasi sangat penting untuk PdM. Saya dapat membantu menganalisis spektrum frekuensi, RMS values, dan peak amplitudes.",
+        "Untuk analisis vibrasi, saya perlu data accelerometer. Apakah Anda memiliki data time-series atau spektrum frekuensi?",
+        "Vibrasi tinggi bisa menandakan bearing rusak, misalignment, atau unbalance. Mari analisis data Anda!"
+      ]
+    },
+    {
+      "tag": "mcsa_analysis",
+      "patterns": [
+        "MCSA",
+        "motor current signature analysis",
+        "analisis arus motor",
+        "current analysis",
+        "motor current",
+        "electrical analysis"
+      ],
+      "responses": [
+        "MCSA (Motor Current Signature Analysis) membantu deteksi kerusakan rotor, stator, dan bearing melalui analisis arus motor.",
+        "Saya dapat menganalisis spektrum arus motor untuk mendeteksi broken rotor bars, eccentricity, dan load variations.",
+        "Upload data arus motor Anda, saya akan analisis harmonik dan sideband frequencies untuk diagnosis."
+      ]
+    },
+    {
+      "tag": "dga_analysis",
+      "patterns": [
+        "DGA",
+        "dissolved gas analysis",
+        "analisis gas terlarut",
+        "transformer oil",
+        "oil analysis",
+        "gas chromatography"
+      ],
+      "responses": [
+        "DGA (Dissolved Gas Analysis) adalah metode diagnosa transformer. Saya dapat menginterpretasi gas H2, CH4, C2H2, C2H4, C2H6, CO, CO2.",
+        "Berdasarkan ratio Duval Triangle dan Rogers Ratio, saya akan identifikasi jenis fault: thermal, electrical, atau cellulose degradation.",
+        "Upload hasil DGA Anda, saya akan berikan interpretasi kondisi transformer dan rekomendasi maintenance."
+      ]
+    },
+    {
+      "tag": "maintenance_recommendation",
+      "patterns": [
+        "maintenance recommendation",
+        "rekomendasi perawatan",
+        "maintenance schedule",
+        "predictive maintenance",
+        "when to maintain",
+        "maintenance strategy"
+      ],
+      "responses": [
+        "Berdasarkan analisis kondisi, saya dapat memberikan rekomendasi: preventive, corrective, atau emergency maintenance.",
+        "Maintenance strategy tergantung kritikalitas asset, failure mode, dan cost analysis. Mari diskusikan kondisi equipment Anda.",
+        "Saya akan merekomendasikan interval maintenance optimal berdasarkan degradation trend dan reliability analysis."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "help",
+        "bantuan",
+        "what can you do",
+        "capabilities",
+        "fitur",
+        "kemampuan"
+      ],
+      "responses": [
+        "Saya RizBot, dapat membantu:\n1. Analisis Vibrasi\n2. Motor Current Signature Analysis (MCSA)\n3. Dissolved Gas Analysis (DGA)\n4. Rekomendasi Maintenance\n5. Interpretasi Data PdM",
+        "Fitur saya: analisis data sensor, diagnosis kerusakan, maintenance planning, dan interpretasi condition monitoring data.",
+        "Upload data Anda atau tanyakan tentang teknik PdM. Saya siap membantu analisis predictive maintenance!"
+      ]
+    }
+  ]
+}
