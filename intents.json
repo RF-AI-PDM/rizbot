@@ -1,0 +1,306 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Good morning",
+        "Good afternoon",
+        "Hey there",
+        "Greetings"
+      ],
+      "responses": [
+        "Hello! I'm your Predictive Maintenance (PdM) assistant specializing in Dissolved Gas Analysis (DGA). How can I help you today?",
+        "Hi there! I'm here to help you with DGA interpretation and transformer condition assessment. What would you like to know?",
+        "Greetings! I'm your DGA expert assistant. Ask me anything about dissolved gas analysis in transformers."
+      ]
+    },
+    {
+      "tag": "dga_what",
+      "patterns": [
+        "What is DGA?",
+        "What is dissolved gas analysis?",
+        "Explain DGA",
+        "Tell me about DGA",
+        "DGA definition"
+      ],
+      "responses": [
+        "DGA (Dissolved Gas Analysis) is the identification, measurement, and interpretation of gases dissolved in transformer insulating liquid. It's one of the most widely used diagnostic tools for transformer condition assessment because it can detect faults early before they become catastrophic failures.",
+        "Dissolved Gas Analysis (DGA) is a diagnostic technique that analyzes gases dissolved in transformer oil to identify internal faults. The method is based on the principle that different fault types produce different gas patterns when the oil and insulation materials decompose.",
+        "DGA stands for Dissolved Gas Analysis. It's a predictive maintenance technique used to detect incipient faults in oil-filled electrical equipment like transformers by analyzing the gases dissolved in the insulating oil."
+      ]
+    },
+    {
+      "tag": "dga_gases",
+      "patterns": [
+        "What gases are analyzed in DGA?",
+        "DGA gases",
+        "List of DGA gases",
+        "Which gases does DGA detect?",
+        "DGA fault gases"
+      ],
+      "responses": [
+        "The principal gases analyzed in DGA are: Hydrogen (H2), Methane (CH4), Ethane (C2H6), Ethylene (C2H4), Acetylene (C2H2), Carbon Monoxide (CO), and Carbon Dioxide (CO2). Oxygen (O2) and Nitrogen (N2) are also measured for interpretation purposes.",
+        "DGA analyzes several key gases: Combustible gases include H2, CH4, C2H6, C2H4, C2H2, and CO. Non-combustible gases include O2, N2, and CO2. Each gas pattern indicates different fault types and severity levels.",
+        "The main fault gases in DGA are hydrogen, methane, ethane, ethylene, acetylene, carbon monoxide, and carbon dioxide. The combination and ratios of these gases help identify the type and severity of transformer faults."
+      ]
+    },
+    {
+      "tag": "fault_types",
+      "patterns": [
+        "What fault types does DGA detect?",
+        "DGA fault types",
+        "Types of transformer faults",
+        "Fault classification in DGA",
+        "DGA fault identification"
+      ],
+      "responses": [
+        "DGA can detect several fault types: Thermal faults (T1, T2, T3) with increasing temperature severity, Electrical discharge faults including partial discharge (PD), low-energy discharges (D1), and high-energy discharges/arcing (D2).",
+        "The main fault types identified by DGA are: 1) Partial Discharge (PD) - low energy electrical activity, 2) Thermal faults (T1-T3) - overheating at different temperature ranges, 3) Electrical discharges (D1-D2) - arcing and sparking faults.",
+        "DGA identifies these key fault categories: Overheating faults (thermal decomposition at various temperatures), Partial discharge (corona), Low-energy discharges, High-energy arcing, and combinations of multiple fault types."
+      ]
+    },
+    {
+      "tag": "dga_methods",
+      "patterns": [
+        "What are DGA interpretation methods?",
+        "DGA analysis methods",
+        "How to interpret DGA results?",
+        "DGA diagnostic methods",
+        "DGA interpretation techniques"
+      ],
+      "responses": [
+        "Common DGA interpretation methods include: Duval Triangle (fault type identification using gas ratios), Rogers Ratios, Key Gas method, Doernenburg Ratios, and the newer Duval Pentagon methods. Each has specific applications and advantages.",
+        "The main DGA interpretation methods are: 1) Duval Triangle - uses CH4, C2H4, C2H2 ratios for fault identification, 2) Rogers Ratios - four different gas ratios, 3) Key Gas method - focuses on predominant gases, 4) IEC gas ratio methods.",
+        "DGA results can be interpreted using several methods: Gas ratio analysis (like Duval Triangle), absolute concentration limits, rate of gas generation, and trending analysis. The Duval methods are currently most widely used for fault type identification."
+      ]
+    },
+    {
+      "tag": "duval_triangle",
+      "patterns": [
+        "What is Duval Triangle?",
+        "Explain Duval Triangle",
+        "How does Duval Triangle work?",
+        "Duval Triangle method",
+        "DGA Duval Triangle interpretation"
+      ],
+      "responses": [
+        "The Duval Triangle is a graphical method for DGA interpretation that uses the percentages of methane (CH4), ethylene (C2H4), and acetylene (C2H2) to identify fault types. Different regions of the triangle correspond to different fault types like PD, T1, T2, T3, D1, and D2.",
+        "Duval Triangle is a triangular diagram where each point represents the relative percentages of CH4, C2H4, and C2H2 gases. By plotting these percentages, you can identify the fault type: thermal faults (T1-T3), partial discharge (PD), or electrical discharges (D1-D2).",
+        "The Duval Triangle method plots the relative concentrations of three key gases (CH4, C2H4, C2H2) as percentages on a triangular diagram. Each zone in the triangle represents a specific fault type, making it easy to diagnose transformer problems."
+      ]
+    },
+    {
+      "tag": "thermal_faults",
+      "patterns": [
+        "What are thermal faults?",
+        "T1 T2 T3 faults",
+        "Thermal fault in transformer",
+        "Overheating in transformer",
+        "Temperature related faults"
+      ],
+      "responses": [
+        "Thermal faults are temperature-related problems in transformers: T1 (150°C-300°C) - low temperature overheating, T2 (300°C-700°C) - medium temperature overheating, T3 (>700°C) - high temperature overheating. Each produces different gas patterns.",
+        "Thermal faults indicate overheating at different temperature ranges: T1 faults produce mainly hydrogen and methane, T2 faults increase ethane production, and T3 faults generate significant ethylene. The gas ratios help determine the fault temperature range.",
+        "T1, T2, and T3 represent thermal faults of increasing severity: T1 is low-temperature overheating (<300°C), T2 is medium-temperature overheating (300-700°C), and T3 is high-temperature overheating (>700°C). Higher temperatures produce more complex hydrocarbon gases."
+      ]
+    },
+    {
+      "tag": "partial_discharge",
+      "patterns": [
+        "What is partial discharge?",
+        "PD in transformer",
+        "Partial discharge DGA",
+        "Corona in transformer",
+        "PD fault detection"
+      ],
+      "responses": [
+        "Partial Discharge (PD) is an electrical discharge that only partially bridges the insulation between conductors. In DGA, PD typically produces mainly hydrogen with small amounts of methane and very little of other hydrocarbon gases.",
+        "Partial discharge is a localized electrical discharge that occurs in gas-filled voids within insulation. DGA can detect PD because it generates characteristic gas patterns, primarily hydrogen, indicating insulation degradation before complete breakdown occurs.",
+        "PD or partial discharge represents incomplete electrical breakdown in insulation voids. It produces mainly hydrogen gas with minimal hydrocarbon gases. Early PD detection through DGA helps prevent catastrophic insulation failures."
+      ]
+    },
+    {
+      "tag": "dga_sampling",
+      "patterns": [
+        "How to take DGA samples?",
+        "DGA sampling procedure",
+        "Oil sampling for DGA",
+        "DGA sample collection",
+        "Proper DGA sampling"
+      ],
+      "responses": [
+        "Proper DGA sampling requires: 1) Use gas-tight glass syringes to minimize air contamination, 2) Follow standard procedures like ASTM D923, 3) Sample from designated sampling valves, 4) Avoid air bubbles, 5) Label samples clearly with transformer ID and date.",
+        "DGA sampling best practices include: Using clean, gas-tight syringes, sampling from the transformer bottom drain valve when possible, avoiding air contamination, proper sample storage and transport, and following established sampling intervals based on transformer condition.",
+        "For accurate DGA results: Sample using gas-tight syringes, take samples from dedicated sampling points, minimize air exposure, maintain proper chain of custody, and ensure samples reach the laboratory quickly to prevent gas migration or contamination."
+      ]
+    },
+    {
+      "tag": "dga_interpretation",
+      "patterns": [
+        "How to interpret DGA results?",
+        "Understanding DGA results",
+        "DGA result analysis",
+        "Reading DGA report",
+        "DGA data interpretation"
+      ],
+      "responses": [
+        "DGA interpretation involves: 1) Check data quality and sample validity, 2) Compare gas concentrations to established limits, 3) Calculate gas ratios for fault identification, 4) Analyze trends over time, 5) Consider transformer age, loading, and operating history.",
+        "To interpret DGA results: First verify sample quality, then compare individual gas concentrations to normal limits, use ratio methods like Duval Triangle for fault identification, examine gas generation rates, and consider the complete picture including electrical tests and operating conditions.",
+        "DGA interpretation requires analyzing: Gas concentration levels against standards, gas ratios for fault type identification, rate of gas generation, trending patterns over time, and correlation with transformer operating conditions and maintenance history."
+      ]
+    },
+    {
+      "tag": "gas_limits",
+      "patterns": [
+        "DGA gas limits",
+        "Normal gas levels",
+        "DGA concentration limits",
+        "Acceptable gas levels",
+        "DGA thresholds"
+      ],
+      "responses": [
+        "Typical DGA limits vary by transformer age and type, but general guidelines include: H2 <100-150 ppm, CH4 <25-50 ppm, C2H6 <10-25 ppm, C2H4 <25-50 ppm, C2H2 <1-3 ppm, CO <350-500 ppm. Always refer to current IEEE or IEC standards for specific limits.",
+        "DGA concentration limits depend on transformer design and age. IEEE C57.104 provides statistical-based limits. Generally: hydrogen <150 ppm, methane <50 ppm, ethylene <50 ppm, acetylene <3 ppm are considered normal for most transformers in service.",
+        "Gas concentration limits are typically categorized into multiple levels (e.g., Condition 1-4 or Status 1-3). Limits vary based on transformer age, preservation system, and operating conditions. Modern standards use statistical approaches rather than fixed limits."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Goodbye",
+        "Bye",
+        "Thanks",
+        "Thank you",
+        "See you later",
+        "Exit"
+      ],
+      "responses": [
+        "Thank you for using the DGA assistant! Stay safe with your transformer maintenance. Goodbye!",
+        "You're welcome! Feel free to ask me about DGA anytime. Take care!",
+        "Goodbye! Remember, regular DGA monitoring is key to transformer reliability. Have a great day!"
+      ]
+    },
+    {
+      "tag": "dga_status",
+      "patterns": [
+        "DGA status levels",
+        "What are DGA conditions?",
+        "DGA status 1 2 3",
+        "Condition levels in DGA",
+        "DGA severity levels"
+      ],
+      "responses": [
+        "DGA results are typically classified into status levels: Status 1 (normal/acceptable levels), Status 2 (attention required, increased monitoring), Status 3 (investigation required, potential fault condition). Some systems use Condition 1-4 classifications.",
+        "DGA status classification helps prioritize actions: Status 1 - routine monitoring, Status 2 - increased sampling frequency, Status 3 - immediate investigation and possible operational restrictions. Classifications are based on gas concentration limits and generation rates.",
+        "DGA condition assessment typically uses 3-4 levels: Condition 1 (normal operation), Condition 2 (increased attention), Condition 3 (active investigation), Condition 4 (consider removal from service). Each level has specific sampling intervals and operational procedures."
+      ]
+    },
+    {
+      "tag": "acetylene_significance",
+      "patterns": [
+        "Why is acetylene important?",
+        "Acetylene in DGA",
+        "C2H2 gas significance",
+        "Acetylene formation",
+        "High temperature fault gas"
+      ],
+      "responses": [
+        "Acetylene (C2H2) is highly significant in DGA because it forms only at very high temperatures (>1000°C), typically indicating arcing or high-energy electrical faults. Any detectable acetylene warrants immediate investigation as it suggests severe fault conditions.",
+        "Acetylene formation requires extreme temperatures, making it a key indicator of electrical arcing or high-energy discharges. Unlike other gases that can form during normal operation, acetylene presence almost always indicates an active fault requiring urgent attention.",
+        "C2H2 (acetylene) is the most critical DGA gas because it only forms during high-temperature arcing events (>1000°C). Its presence indicates D2 faults (high-energy arcing) and requires immediate transformer investigation and possible removal from service."
+      ]
+    },
+    {
+      "tag": "gas_ratios",
+      "patterns": [
+        "DGA gas ratios",
+        "Gas ratio analysis",
+        "Rogers ratios",
+        "Gas ratio interpretation",
+        "DGA ratio methods"
+      ],
+      "responses": [
+        "Key DGA gas ratios include: C2H2/C2H4 (arcing indicator), CH4/H2 (thermal vs electrical), C2H4/C2H6 (fault temperature), and CO2/CO (paper insulation condition). These ratios help identify fault types more accurately than individual gas levels.",
+        "Gas ratio analysis uses relationships between different gases: Rogers ratios (4 ratios), IEC ratios (3 ratios), and basic ratios like acetylene/ethylene for arcing detection. Ratios are often more reliable than absolute concentrations for fault diagnosis.",
+        "Important DGA ratios: C2H2/C2H4 >1.0 suggests arcing, CH4/H2 >1.0 indicates thermal faults, C2H4/C2H6 >1.0 shows high temperature, CO2/CO <3 may indicate cellulose degradation. Multiple ratios should be considered together for accurate diagnosis."
+      ]
+    },
+    {
+      "tag": "stray_gassing",
+      "patterns": [
+        "What is stray gassing?",
+        "Stray gassing in transformers",
+        "Non-fault gas generation",
+        "Stray gassing causes",
+        "False DGA readings"
+      ],
+      "responses": [
+        "Stray gassing is gas generation not related to electrical or thermal faults, often caused by oil additives, metal passivators, or chemical reactions. It can produce hydrogen and sometimes methane, potentially masking or mimicking fault conditions in DGA analysis.",
+        "Stray gassing refers to gas production from sources other than faults, such as catalytic reactions with metals, oil decomposition, or additive interactions. It's important to identify stray gassing to avoid false fault diagnoses in DGA interpretation.",
+        "Non-fault related gas generation (stray gassing) can occur due to: oil additive reactions, metal catalytic effects, galvanic corrosion, or oil contamination. This phenomenon can interfere with DGA fault detection and requires careful analysis to distinguish from actual faults."
+      ]
+    },
+    {
+      "tag": "dga_trending",
+      "patterns": [
+        "DGA trending",
+        "Gas level trending",
+        "DGA rate of change",
+        "Gas generation rate",
+        "DGA monitoring over time"
+      ],
+      "responses": [
+        "DGA trending analyzes gas concentration changes over time to identify active fault conditions. Rate of gas generation (ppm/year or μL/L/year) is often more important than absolute levels for determining fault severity and progression.",
+        "Gas trending involves monitoring concentration changes and generation rates over multiple samples. Accelerating gas production indicates worsening conditions, while stable trends may suggest inactive or resolved faults. Minimum 3-4 samples needed for reliable trending.",
+        "DGA trend analysis examines: gas generation rates, acceleration patterns, seasonal variations, and correlation with loading. Key indicators include doubling times, rate increases, and sustained gas production indicating active fault progression."
+      ]
+    },
+    {
+      "tag": "paper_insulation",
+      "patterns": [
+        "Paper insulation DGA",
+        "Cellulose degradation",
+        "CO CO2 in DGA",
+        "Paper aging detection",
+        "Insulation condition assessment"
+      ],
+      "responses": [
+        "Paper insulation degradation produces CO and CO2 gases. High CO with low CO2/CO ratio (<3) may indicate thermal damage to cellulose. High CO2 with high CO2/CO ratio (>20) typically indicates normal aging or low-temperature paper degradation.",
+        "Cellulose (paper) insulation analysis uses carbon oxide gases: CO indicates thermal damage to paper, CO2 shows aging/oxidation. The CO2/CO ratio helps distinguish between normal aging (high ratio) and thermal faults in paper (low ratio).",
+        "Paper insulation condition assessment through DGA: CO >350 ppm may indicate paper overheating, CO2 >10,000 ppm suggests significant aging. Furan analysis provides additional paper condition information beyond standard DGA gases."
+      ]
+    },
+    {
+      "tag": "online_monitoring",
+      "patterns": [
+        "Online DGA monitoring",
+        "Continuous DGA monitoring",
+        "Online gas monitors",
+        "Real-time DGA",
+        "Automatic DGA systems"
+      ],
+      "responses": [
+        "Online DGA monitoring systems provide continuous gas analysis, enabling rapid fault detection and trending. These systems can monitor key gases (H2, CO, C2H4, C2H2) and provide alarms for abnormal conditions, improving transformer reliability and reducing outage risks.",
+        "Continuous DGA monitoring offers real-time fault detection, automatic data logging, and immediate alarms for critical gas levels. Online monitors are especially valuable for critical transformers where rapid response to fault conditions is essential.",
+        "Online DGA systems continuously sample and analyze transformer oil, providing immediate fault detection and trending data. They're particularly useful for GSU transformers, critical network units, and transformers with history of gas generation."
+      ]
+    },
+    {
+      "tag": "dga_limitations",
+      "patterns": [
+        "DGA limitations",
+        "DGA disadvantages",
+        "What DGA cannot detect",
+        "DGA false positives",
+        "DGA interpretation challenges"
+      ],
+      "responses": [
+        "DGA limitations include: cannot detect all fault types (e.g., bushing problems, tank leaks), may give false positives from stray gassing, requires multiple samples for trending, affected by sampling quality, and interpretation needs expertise and context.",
+        "DGA cannot detect: external faults, bushing deterioration, tank corrosion, moisture ingress alone, or mechanical problems. It may be affected by sampling errors, stray gassing, oil additives, or operational factors like loading and temperature cycles.",
+        "Key DGA limitations: delayed fault detection (gases take time to diffuse), sampling-dependent accuracy, potential for false alarms, inability to locate fault position, and need for trending data. Should be combined with other diagnostic methods for comprehensive assessment."
+      ]
+    }
+  ]
+}
