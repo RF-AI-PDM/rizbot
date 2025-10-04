@@ -1,0 +1,22 @@
+# Core dependencies
+python>=3.10
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine Learning (optional, for future development)
+scikit-learn>=1.3.0
+
+# PDF processing (for document analysis)
+PyPDF2>=3.0.0
+
+# Natural Language Processing
+nltk>=3.8.0
+
+# Web interface (optional, for future web deployment)
+flask>=2.3.0
+streamlit>=1.28.0
+
+# Utilities
+python-dotenv>=1.0.0
