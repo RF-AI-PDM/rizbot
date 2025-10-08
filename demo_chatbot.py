@@ -4,6 +4,8 @@ Simple demo script to show how intents.json can be used for DGA chatbot
 """
 import json
 import random
+import os
+from pathlib import Path
 from difflib import get_close_matches
 
 def load_intents(filename):
@@ -42,7 +44,11 @@ def demo_chatbot():
     print("=== DGA Chatbot Demo ===")
     print("Loading intents.json...")
     
-    intents = load_intents('/home/runner/work/rizbot/rizbot/intents.json')
+    # Use relative path or path relative to script location
+    script_dir = Path(__file__).parent
+    intents_file = script_dir / 'intents.json'
+    
+    intents = load_intents(intents_file)
     print(f"Loaded {len(intents)} intent categories")
     
     # Display available topics

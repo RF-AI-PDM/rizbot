@@ -14,11 +14,30 @@ Tujuan project ini: membantu teknisi memahami data vibrasi, MCSA, DGA, dan membu
 ---
 
 ## 📂 Struktur Folder
+```
 chatbot-pdm/
-│── data/ # Dataset & dokumen (PDF, CSV, dll.)
-│── intents.json # Daftar intent & jawaban chatbot
-│── chatbot.py # Main script chatbot CLI
-│── requirements.txt # Daftar dependencies Python
-│── README.md # Dokumentasi project
+│── data/                    # Dataset & dokumen (PDF, CSV, dll.)
+│── intents.json             # Daftar intent & jawaban chatbot
+│── demo_chatbot.py          # Demo script chatbot CLI
+│── config_search.py         # Tool untuk mencari konfigurasi
+│── CONFIG_SEARCH_README.md  # Dokumentasi configuration search tool
+│── README.md                # Dokumentasi project
+```
+
+## 🔍 Configuration Search Tool
+
+Project ini dilengkapi dengan tool untuk mencari dan mengidentifikasi konfigurasi dalam kode:
+
+```bash
+python3 config_search.py
+```
+
+Tool ini akan mencari:
+- File paths yang hardcoded
+- Potensi API keys atau credentials
+- Environment variables
+- Pattern konfigurasi lainnya
+
+Lihat [CONFIG_SEARCH_README.md](CONFIG_SEARCH_README.md) untuk detail lengkap.
 
 
