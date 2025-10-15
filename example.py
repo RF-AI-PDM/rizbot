@@ -3,9 +3,6 @@
 Example script demonstrating RizBot usage
 """
 
-import sys
-import os
-
 # Import RizBot class
 from chatbot import RizBot
 
@@ -16,8 +13,12 @@ def main():
     print("=" * 70)
     print()
     
-    # Initialize chatbot
-    bot = RizBot('intents.json')
+    # Initialize chatbot (file existence check is done in RizBot.__init__)
+    try:
+        bot = RizBot('intents.json')
+    except (FileNotFoundError, SystemExit):
+        print("Error: Could not initialize RizBot. Make sure intents.json exists.")
+        return
     
     # List of example questions
     questions = [
