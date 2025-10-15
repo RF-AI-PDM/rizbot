@@ -22,7 +22,9 @@ rizbot/
 │   └── IEEE-dga.csv   # Data standar DGA untuk transformer
 ├── intents.json       # Daftar intent & jawaban chatbot
 ├── chatbot.py         # Main script chatbot CLI
+├── example.py         # Script demo penggunaan RizBot
 ├── requirements.txt   # Daftar dependencies Python
+├── .gitignore         # File yang diabaikan Git
 ├── LICENSE            # MIT License
 └── README.md          # Dokumentasi project
 ```
@@ -53,6 +55,8 @@ python chatbot.py
 
 ## 💻 Cara Penggunaan
 
+### Mode Interaktif (CLI)
+
 Setelah menjalankan `python chatbot.py`, Anda akan disambut dengan interface RizBot:
 
 ```
@@ -72,6 +76,26 @@ Ketik 'help' untuk melihat daftar topik.
 ----------------------------------------------------------------------
 
 Anda: 
+```
+
+### Mode Programmatic
+
+Anda juga dapat menggunakan RizBot dalam script Python Anda:
+
+```python
+from chatbot import RizBot
+
+# Initialize chatbot
+bot = RizBot('intents.json')
+
+# Get response
+response, confidence = bot.get_response("Apa itu analisis vibrasi?")
+print(response)
+```
+
+Atau jalankan contoh demo:
+```bash
+python example.py
 ```
 
 ### Contoh Pertanyaan
