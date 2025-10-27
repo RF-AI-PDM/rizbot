@@ -1,0 +1,193 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Halo",
+        "Selamat pagi",
+        "Selamat siang",
+        "Selamat sore",
+        "Hai"
+      ],
+      "responses": [
+        "Halo! Saya chatbot Predictive Maintenance. Bagaimana saya bisa membantu Anda hari ini?",
+        "Hai! Ada yang bisa saya bantu terkait predictive maintenance?",
+        "Selamat datang! Saya siap membantu Anda dengan analisis PdM."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Sampai jumpa",
+        "Terima kasih",
+        "Selesai",
+        "Exit",
+        "Quit"
+      ],
+      "responses": [
+        "Sampai jumpa! Semoga perawatan Anda berjalan lancar.",
+        "Terima kasih telah menggunakan layanan kami. Sampai bertemu lagi!",
+        "Bye! Jaga kesehatan mesin Anda."
+      ]
+    },
+    {
+      "tag": "dga_analysis",
+      "patterns": [
+        "Apa itu DGA",
+        "DGA adalah",
+        "Dissolved Gas Analysis",
+        "Analisis gas terlarut",
+        "Bagaimana cara DGA",
+        "Jelaskan DGA"
+      ],
+      "responses": [
+        "DGA (Dissolved Gas Analysis) adalah metode untuk menganalisis gas terlarut dalam minyak trafo. Gas-gas seperti H2, CH4, C2H2, C2H4, C2H6, CO, dan CO2 dapat mengindikasikan kondisi trafo.",
+        "Dissolved Gas Analysis (DGA) menganalisis komposisi gas dalam minyak isolasi trafo untuk mendeteksi gangguan internal seperti overheating, arcing, dan partial discharge.",
+        "DGA membantu mengidentifikasi masalah trafo melalui analisis gas H2, CH4, C2H2, C2H4, C2H6, CO, dan CO2 yang terlarut dalam minyak."
+      ]
+    },
+    {
+      "tag": "dga_interpretation",
+      "patterns": [
+        "Interpretasi DGA",
+        "Cara membaca hasil DGA",
+        "Metode DGA",
+        "Roger ratio",
+        "Duval triangle",
+        "IEEE method"
+      ],
+      "responses": [
+        "Ada beberapa metode interpretasi DGA: 1) Roger Ratio Method, 2) Duval Triangle, 3) IEEE C57.104 Method, 4) IEC 60599. Setiap metode memiliki pendekatan berbeda untuk mengidentifikasi jenis gangguan.",
+        "Interpretasi DGA dapat menggunakan Roger Ratio (perbandingan gas), Duval Triangle (plot grafis), atau IEEE C57.104 Method (key gas analysis).",
+        "Metode DGA yang umum: Roger Ratio menggunakan perbandingan C2H2/C2H4, CH4/H2, C2H4/C2H6. Duval Triangle menggunakan plot %C2H2, %CH4, %C2H4 untuk klasifikasi visual."
+      ]
+    },
+    {
+      "tag": "vibration_analysis",
+      "patterns": [
+        "Analisis vibrasi",
+        "Vibration analysis",
+        "Getaran mesin",
+        "Monitoring vibrasi",
+        "FFT analysis",
+        "Spektrum vibrasi"
+      ],
+      "responses": [
+        "Analisis vibrasi mengukur getaran mesin untuk mendeteksi masalah seperti unbalance, misalignment, bearing failure, dan looseness. Menggunakan FFT untuk menganalisis frekuensi.",
+        "Vibration analysis memantau kesehatan mesin melalui pengukuran amplitudo, frekuensi, dan fase getaran. Dapat mendeteksi kerusakan bearing, unbalance, dan masalah mekanik lainnya.",
+        "Monitoring vibrasi menggunakan sensor accelerometer untuk mengukur getaran dalam mm/s atau g. Analisis FFT mengubah sinyal waktu ke domain frekuensi untuk identifikasi masalah."
+      ]
+    },
+    {
+      "tag": "mcsa_analysis",
+      "patterns": [
+        "MCSA",
+        "Motor Current Signature Analysis",
+        "Analisis arus motor",
+        "Current analysis",
+        "Motor fault detection"
+      ],
+      "responses": [
+        "MCSA (Motor Current Signature Analysis) menganalisis sinyal arus motor untuk mendeteksi gangguan seperti broken rotor bars, eccentricity, bearing faults, dan stator problems.",
+        "Motor Current Signature Analysis menggunakan FFT pada sinyal arus untuk mengidentifikasi frekuensi karakteristik yang mengindikasikan kerusakan motor.",
+        "MCSA dapat mendeteksi: 1) Broken rotor bars (sideband pada slip frequency), 2) Bearing faults (BPFO, BPFI frequencies), 3) Eccentricity (air gap irregularities)."
+      ]
+    },
+    {
+      "tag": "bearing_failure",
+      "patterns": [
+        "Kerusakan bearing",
+        "Bearing failure",
+        "BPFO",
+        "BPFI",
+        "BSF",
+        "FTF",
+        "Bearing fault frequencies"
+      ],
+      "responses": [
+        "Bearing failures dapat dideteksi melalui frekuensi karakteristik: BPFO (Ball Pass Frequency Outer race), BPFI (Ball Pass Frequency Inner race), BSF (Ball Spin Frequency), FTF (Fundamental Train Frequency).",
+        "Frekuensi kerusakan bearing: BPFO untuk kerusakan outer race, BPFI untuk inner race, BSF untuk kerusakan ball/roller, FTF untuk cage defects. Semuanya dapat dihitung dari geometri bearing.",
+        "Analisis bearing menggunakan envelope analysis atau spektrum vibrasi untuk mendeteksi frekuensi BPFO, BPFI, BSF, dan FTF yang mengindikasikan lokasi kerusakan."
+      ]
+    },
+    {
+      "tag": "predictive_maintenance",
+      "patterns": [
+        "Predictive maintenance",
+        "PdM",
+        "Perawatan prediktif",
+        "Condition based maintenance",
+        "CBM"
+      ],
+      "responses": [
+        "Predictive Maintenance (PdM) menggunakan data kondisi real-time untuk memprediksi kapan perawatan diperlukan, mengurangi downtime dan biaya maintenance.",
+        "PdM berbeda dari preventive maintenance karena menggunakan condition monitoring (vibrasi, suhu, arus, DGA) untuk menentukan waktu perawatan optimal.",
+        "Keuntungan PdM: 1) Mengurangi unplanned downtime, 2) Optimasi biaya maintenance, 3) Memperpanjang umur equipment, 4) Meningkatkan safety dan reliability."
+      ]
+    },
+    {
+      "tag": "fault_diagnosis",
+      "patterns": [
+        "Diagnosis kerusakan",
+        "Fault diagnosis",
+        "Troubleshooting",
+        "Identifikasi masalah",
+        "Root cause analysis"
+      ],
+      "responses": [
+        "Diagnosis kerusakan menggunakan multi-sensor data: vibrasi, suhu, arus, DGA, thermal imaging. Kombinasi data memberikan diagnosis yang lebih akurat.",
+        "Proses fault diagnosis: 1) Data collection, 2) Feature extraction, 3) Pattern recognition, 4) Fault classification, 5) Root cause analysis, 6) Recommendation.",
+        "Teknologi diagnosis modern menggunakan machine learning untuk pattern recognition dan AI untuk automated fault classification."
+      ]
+    },
+    {
+      "tag": "temperature_monitoring",
+      "patterns": [
+        "Monitoring suhu",
+        "Temperature monitoring",
+        "Thermal imaging",
+        "Hotspot detection",
+        "Infrared thermography"
+      ],
+      "responses": [
+        "Temperature monitoring menggunakan sensors, thermocouples, RTDs, atau thermal cameras untuk mendeteksi overheating yang dapat menyebabkan kerusakan.",
+        "Thermal imaging (thermography) dapat mendeteksi hotspots, loose connections, overloaded circuits, dan masalah insulation sebelum terjadi failure.",
+        "Kenaikan suhu abnormal mengindikasikan: 1) Overload, 2) Poor lubrication, 3) Bearing wear, 4) Electrical resistance, 5) Cooling system failure."
+      ]
+    },
+    {
+      "tag": "oil_analysis",
+      "patterns": [
+        "Analisis minyak",
+        "Oil analysis",
+        "Lubricant analysis",
+        "Oil condition monitoring",
+        "Viscosity test"
+      ],
+      "responses": [
+        "Oil analysis mencakup: 1) Viscosity test, 2) Acid number, 3) Water content, 4) Particle count, 5) Spectroscopy untuk metal wear particles, 6) DGA untuk trafo oil.",
+        "Lubricant condition monitoring dapat mendeteksi: contamination, degradation, dan wear particles yang mengindikasikan kondisi mesin dan kualitas minyak.",
+        "Oil analysis parameters: viscosity (kekentalan), TAN (Total Acid Number), moisture content, particle contamination, dan metal elements dari wear debris."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "Help",
+        "Bantuan",
+        "Apa yang bisa kamu lakukan",
+        "Fitur apa saja",
+        "Tolong",
+        "Panduan"
+      ],
+      "responses": [
+        "Saya dapat membantu Anda dengan:\n1. DGA (Dissolved Gas Analysis)\n2. Vibration Analysis\n3. MCSA (Motor Current Signature Analysis)\n4. Bearing fault detection\n5. Temperature monitoring\n6. Oil analysis\n7. Predictive maintenance concepts\n\nSilakan tanyakan topik yang Anda minati!",
+        "Saya adalah chatbot PdM yang dapat membantu dengan analisis DGA, vibrasi, MCSA, bearing faults, monitoring suhu, dan konsep predictive maintenance. Tanyakan apa saja!",
+        "Fitur yang tersedia:\n- Penjelasan metode DGA\n- Analisis vibrasi dan FFT\n- MCSA untuk motor\n- Diagnosis bearing failure\n- Temperature dan oil monitoring\n- Konsep PdM dan CBM"
+      ]
+    }
+  ]
+}
