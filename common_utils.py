@@ -60,7 +60,7 @@ class FileUtils:
             # Handle filenames without directory paths
             dirname = os.path.dirname(filename) or '.'
             if dirname != '.':
-                os.makedirs(dirname, exist_ok=True)
+                FileUtils.ensure_dir_exists(dirname)
             with open(filename, 'w', encoding='utf-8') as file:
                 json.dump(data, file, indent=indent, ensure_ascii=False)
             print(f"✓ Saved data to {filename}")

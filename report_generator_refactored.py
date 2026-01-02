@@ -13,6 +13,7 @@ from datetime import datetime
 import json
 from typing import Dict, List, Optional
 import numpy as np
+from pathlib import Path
 
 # Import common utilities (eliminates duplicated code)
 from common_utils import (
@@ -445,7 +446,6 @@ class DGAReportGenerator:
             html.append("        </table>\n")
         
         # Charts - simplified path handling
-        import os
         chart_files = ['gas_levels.png', 'status_overview.png']
         output_dir = str(ConfigManager.get_reports_dir())
         existing_charts = [f for f in chart_files if os.path.exists(os.path.join(output_dir, f))]
@@ -514,11 +514,11 @@ class DGAReportGenerator:
         
         print("Generating reports...")
         if 'markdown' in formats:
-            md_path = self.generate_markdown_report(f"{output_dir}/report.md")
+            md_path = self.generate_markdown_report(os.path.join(output_dir, 'report.md'))
             output_files['markdown'] = md_path
         
         if 'html' in formats:
-            html_path = self.generate_html_report(f"{output_dir}/report.html")
+            html_path = self.generate_html_report(os.path.join(output_dir, 'report.html'))
             output_files['html'] = html_path
         
         print_success("Report generation complete!")

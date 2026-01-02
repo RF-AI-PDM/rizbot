@@ -6,6 +6,7 @@ Tests that all refactored code works correctly
 
 import sys
 import os
+from pathlib import Path
 
 # Add current directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -14,6 +15,11 @@ from common_utils import (
     FileUtils, ErrorHandler, DataProcessor, ConfigManager,
     print_section_header, print_success, print_error, print_info
 )
+
+# Configuration constants
+CHATBOT_MODULE_DIR = Path('chatbot_module')
+INTENTS_FILE = Path('intents.json')
+CHATBOT_INTENTS = CHATBOT_MODULE_DIR / 'intents.json'
 
 
 def test_common_utils():
@@ -63,15 +69,13 @@ def test_chatbot_import():
         
         # Check if intents.json exists
         import shutil
-        CHATBOT_INTENTS = os.path.join('chatbot_module', 'intents.json')
-        INTENTS_FILE = 'intents.json'
         
-        if os.path.exists(CHATBOT_INTENTS) and not os.path.exists(INTENTS_FILE):
-            shutil.copy(CHATBOT_INTENTS, INTENTS_FILE)
+        if CHATBOT_INTENTS.exists() and not INTENTS_FILE.exists():
+            shutil.copy(str(CHATBOT_INTENTS), str(INTENTS_FILE))
             print_info("Copied intents.json to current directory")
         
-        if os.path.exists(INTENTS_FILE):
-            bot = RizBot(INTENTS_FILE)
+        if INTENTS_FILE.exists():
+            bot = RizBot(str(INTENTS_FILE))
             print_success("Successfully initialized RizBot instance")
             
             # Test a simple query

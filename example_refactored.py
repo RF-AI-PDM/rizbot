@@ -9,6 +9,9 @@ REFACTORED VERSION: Uses common_utils for shared functionality
 from chatbot_refactored import RizBot
 from common_utils import print_section_header, ErrorHandler, FileUtils
 
+# Configuration constants
+INTENTS_FILE = 'intents.json'
+
 
 def main():
     """Example usage of RizBot"""
@@ -16,9 +19,9 @@ def main():
     
     # Initialize chatbot with error handling
     def init_bot():
-        if not FileUtils.check_file_exists('intents.json', "Intents file"):
-            raise FileNotFoundError("intents.json not found")
-        return RizBot('intents.json')
+        if not FileUtils.check_file_exists(INTENTS_FILE, "Intents file"):
+            raise FileNotFoundError(f"{INTENTS_FILE} not found")
+        return RizBot(INTENTS_FILE)
     
     bot = ErrorHandler.safe_execute(
         init_bot,
@@ -27,7 +30,7 @@ def main():
     )
     
     if bot is None:
-        print("Error: Make sure intents.json exists in the current directory.")
+        print(f"Error: Make sure {INTENTS_FILE} exists in the current directory.")
         return 1
     
     # List of example questions
