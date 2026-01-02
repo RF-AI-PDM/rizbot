@@ -1,0 +1,185 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Halo",
+        "Hai",
+        "Good morning",
+        "Good afternoon",
+        "Hey"
+      ],
+      "responses": [
+        "Halo! Saya RizBot, chatbot untuk Predictive Maintenance. Bagaimana saya bisa membantu Anda hari ini?",
+        "Hi! Saya RizBot. Saya dapat membantu Anda dengan analisis vibrasi, MCSA, DGA, dan rekomendasi perawatan.",
+        "Halo! Ada yang bisa saya bantu tentang Predictive Maintenance?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you",
+        "Sampai jumpa",
+        "Exit",
+        "Quit"
+      ],
+      "responses": [
+        "Sampai jumpa! Jangan ragu untuk kembali jika butuh bantuan.",
+        "Terima kasih telah menggunakan RizBot. Sampai ketemu lagi!",
+        "Bye! Semoga perawatan mesin Anda berjalan lancar."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Terima kasih",
+        "Thanks a lot",
+        "Appreciate it"
+      ],
+      "responses": [
+        "Sama-sama! Senang bisa membantu.",
+        "Tidak masalah! Jika ada pertanyaan lagi, jangan ragu bertanya.",
+        "Terima kasih kembali! Semoga informasi ini bermanfaat."
+      ]
+    },
+    {
+      "tag": "vibration_analysis",
+      "patterns": [
+        "Apa itu analisis vibrasi?",
+        "Jelaskan tentang vibrasi",
+        "Vibration analysis",
+        "Bagaimana cara menganalisis vibrasi?",
+        "Vibrasi tinggi",
+        "Getaran mesin"
+      ],
+      "responses": [
+        "Analisis vibrasi adalah teknik monitoring kondisi mesin dengan mengukur getaran. Vibrasi abnormal dapat mengindikasikan masalah seperti ketidakseimbangan, misalignment, bearing rusak, atau resonansi. Level vibrasi diukur dalam mm/s RMS atau g peak.",
+        "Analisis vibrasi membantu mendeteksi kerusakan dini pada mesin. Pola vibrasi tertentu mengindikasikan jenis kerusakan: ketidakseimbangan (1x RPM), misalignment (2x RPM), bearing defect (frekuensi tinggi), dll.",
+        "Dalam predictive maintenance, analisis vibrasi adalah salah satu teknik paling efektif. Sensor accelerometer mengukur getaran, kemudian data dianalisis menggunakan FFT untuk identifikasi pola kegagalan."
+      ]
+    },
+    {
+      "tag": "mcsa",
+      "patterns": [
+        "Apa itu MCSA?",
+        "Motor Current Signature Analysis",
+        "Analisis arus motor",
+        "MCSA analysis",
+        "Jelaskan MCSA",
+        "Current signature"
+      ],
+      "responses": [
+        "MCSA (Motor Current Signature Analysis) adalah teknik monitoring motor listrik dengan menganalisis sinyal arus. Metode ini dapat mendeteksi masalah seperti broken rotor bar, stator winding fault, bearing defect, dan air gap eccentricity tanpa sensor tambahan.",
+        "MCSA menganalisis spektrum frekuensi arus motor untuk identifikasi kerusakan. Frekuensi sidebands di sekitar supply frequency mengindikasikan kondisi tertentu: broken rotor bar (f ± 2sf), bearing fault (BPFI, BPFO, BSF), dll.",
+        "Keuntungan MCSA: non-invasive, tidak perlu sensor tambahan, bisa dilakukan saat motor beroperasi. Analisis dilakukan dengan FFT untuk mendeteksi anomali pada spektrum arus."
+      ]
+    },
+    {
+      "tag": "dga",
+      "patterns": [
+        "Apa itu DGA?",
+        "Dissolved Gas Analysis",
+        "Analisis gas terlarut",
+        "DGA transformer",
+        "Jelaskan DGA",
+        "Gas dalam minyak trafo"
+      ],
+      "responses": [
+        "DGA (Dissolved Gas Analysis) adalah metode untuk mendeteksi fault pada transformator dengan menganalisis gas terlarut dalam minyak isolasi. Gas seperti H2, CH4, C2H6, C2H4, C2H2, CO, CO2 mengindikasikan jenis kerusakan tertentu.",
+        "DGA menggunakan metode seperti Rogers Ratio, Doernenburg Ratio, IEC 60599, dan IEEE C57.104 untuk interpretasi. Misalnya: C2H2 tinggi = arcing, CH4/C2H4 tinggi = overheating, H2 tinggi = partial discharge.",
+        "Dalam DGA, konsentrasi gas diukur dalam ppm. Dataset IEEE-dga.csv berisi standar interpretasi gas untuk identifikasi jenis fault: Thermal fault, Partial Discharge, Arcing, dll."
+      ]
+    },
+    {
+      "tag": "maintenance_recommendation",
+      "patterns": [
+        "Rekomendasi perawatan",
+        "Apa yang harus dilakukan?",
+        "Maintenance recommendation",
+        "Tindakan perbaikan",
+        "Kapan harus service?",
+        "Jadwal maintenance"
+      ],
+      "responses": [
+        "Rekomendasi perawatan tergantung kondisi mesin:\n1. Vibrasi tinggi (>7mm/s): Segera inspeksi, cek alignment dan balancing\n2. MCSA abnormal: Periksa rotor, bearing, dan stator\n3. DGA fault: Analisis lebih lanjut, test minyak, pertimbangkan shutdown\n4. Trend monitoring: Lakukan pengukuran berkala untuk tracking kondisi",
+        "Strategi maintenance:\n- Predictive: Monitoring kondisi real-time, maintenance based on condition\n- Preventive: Jadwal rutin berdasarkan waktu/usage\n- Corrective: Perbaikan setelah failure (tidak disarankan)\nGunakan data vibrasi, MCSA, DGA untuk predictive maintenance yang efektif.",
+        "Frequency monitoring:\n- Critical equipment: Weekly atau continuous monitoring\n- Important equipment: Monthly monitoring\n- Normal equipment: Quarterly monitoring\nSesuaikan dengan criticality dan kondisi operasi mesin."
+      ]
+    },
+    {
+      "tag": "bearing_fault",
+      "patterns": [
+        "Bearing fault",
+        "Kerusakan bearing",
+        "Bantalan rusak",
+        "Bearing defect",
+        "BPFO BPFI"
+      ],
+      "responses": [
+        "Bearing fault terdeteksi melalui:\n1. Vibrasi: Frekuensi BPFO (outer race), BPFI (inner race), BSF (ball spin), FTF (cage)\n2. MCSA: Sidebands pada bearing frequency\n3. Kondisi: Panas berlebih, noise, getaran tinggi\nSegera ganti bearing jika terdeteksi fault untuk mencegah kerusakan lebih parah.",
+        "Perhitungan bearing frequency:\n- BPFO = (N/2) × (1 + (Bd/Pd) × cos(θ)) × RPM/60\n- BPFI = (N/2) × (1 - (Bd/Pd) × cos(θ)) × RPM/60\n- BSF = (Pd/2Bd) × (1 - (Bd/Pd)² × cos²(θ)) × RPM/60\nN=jumlah ball, Bd=ball diameter, Pd=pitch diameter, θ=contact angle"
+      ]
+    },
+    {
+      "tag": "misalignment",
+      "patterns": [
+        "Misalignment",
+        "Ketidakselarasan",
+        "Alignment problem",
+        "Coupling misalignment",
+        "Shaft misalignment"
+      ],
+      "responses": [
+        "Misalignment adalah kondisi dimana centerline shaft tidak sejajar. Tipe:\n1. Angular misalignment: Sudut shaft berbeda\n2. Parallel misalignment: Shaft parallel tapi offset\n3. Kombinasi keduanya\nGejala: Vibrasi 2x RPM tinggi (radial), vibrasi aksial tinggi, coupling panas, seal bocor.",
+        "Deteksi misalignment:\n- Vibrasi: Dominan pada 2x RPM, kadang 3x RPM\n- Phase analysis: Beda phase 180° pada coupling\n- Thermal imaging: Hot spot pada coupling/bearing\nSolusi: Lakukan laser alignment, pastikan toleransi alignment sesuai standar (<0.05mm)."
+      ]
+    },
+    {
+      "tag": "unbalance",
+      "patterns": [
+        "Unbalance",
+        "Ketidakseimbangan",
+        "Balancing",
+        "Rotor tidak seimbang",
+        "Imbalance"
+      ],
+      "responses": [
+        "Unbalance terjadi ketika center of mass rotor tidak sama dengan center of rotation. Gejala utama: Vibrasi tinggi pada 1x RPM (running speed). Penyebab: material tidak uniform, korosi, deposit, komponen lepas.",
+        "Jenis unbalance:\n1. Static unbalance: Single plane, rotor settle di satu posisi\n2. Dynamic unbalance: Two plane, butuh balancing di 2 lokasi\n3. Couple unbalance: Kombinasi\nSolusi: Balancing dengan menambah/kurangi massa pada lokasi tertentu, target vibrasi <2.8mm/s sesuai ISO 10816."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "Help",
+        "Bantuan",
+        "Apa yang bisa kamu lakukan?",
+        "Fitur",
+        "Kemampuan"
+      ],
+      "responses": [
+        "Saya RizBot dapat membantu Anda dengan:\n✓ Analisis Vibrasi - Deteksi unbalance, misalignment, bearing fault\n✓ MCSA - Motor current signature analysis\n✓ DGA - Dissolved gas analysis untuk transformer\n✓ Rekomendasi Maintenance - Saran perawatan berdasarkan kondisi\n✓ Fault Diagnosis - Identifikasi jenis kerusakan\n\nTanyakan apapun tentang predictive maintenance!",
+        "Topik yang bisa saya bantu:\n• Vibration Analysis (analisis getaran mesin)\n• MCSA (analisis arus motor)\n• DGA (analisis gas trafo)\n• Bearing faults\n• Misalignment\n• Unbalance\n• Maintenance strategies\n\nKetik pertanyaan Anda atau topik yang ingin dibahas."
+      ]
+    },
+    {
+      "tag": "about",
+      "patterns": [
+        "Tentang kamu",
+        "Siapa kamu?",
+        "About",
+        "Apa itu RizBot?"
+      ],
+      "responses": [
+        "Saya RizBot - Chatbot Predictive Maintenance yang dikembangkan untuk membantu teknisi dan engineer dalam monitoring dan analisis kondisi mesin. Saya dilatih dengan pengetahuan tentang vibrasi, MCSA, DGA, dan best practices maintenance.",
+        "RizBot adalah AI assistant untuk Predictive Maintenance (PdM). Tujuan saya adalah membantu Anda memahami data monitoring, menginterpretasi hasil analisis, dan memberikan rekomendasi perawatan yang tepat untuk meningkatkan reliability equipment."
+      ]
+    }
+  ]
+}
