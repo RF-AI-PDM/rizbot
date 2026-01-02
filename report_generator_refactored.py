@@ -5,6 +5,7 @@ Generates comprehensive reports from transformer gas analysis data
 REFACTORED VERSION: Uses common_utils for shared functionality
 """
 
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -182,7 +183,7 @@ class DGAReportGenerator:
                 ax.legend()
                 ax.grid(True, alpha=0.3)
                 
-                chart_path = f"{output_dir}/gas_levels.png"
+                chart_path = os.path.join(output_dir, 'gas_levels.png')
                 plt.tight_layout()
                 plt.savefig(chart_path, dpi=300, bbox_inches='tight')
                 plt.close()
@@ -211,7 +212,7 @@ class DGAReportGenerator:
                            startangle=90, textprops={'fontsize': 11})
                     ax.set_title('Gas Status Distribution')
                     
-                    chart_path = f"{output_dir}/status_overview.png"
+                    chart_path = os.path.join(output_dir, 'status_overview.png')
                     plt.tight_layout()
                     plt.savefig(chart_path, dpi=300, bbox_inches='tight')
                     plt.close()

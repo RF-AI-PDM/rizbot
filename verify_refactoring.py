@@ -61,14 +61,17 @@ def test_chatbot_import():
         from chatbot_refactored import RizBot
         print_success("Successfully imported RizBot class")
         
-        # Check if intents.json exists in chatbot_module
+        # Check if intents.json exists
         import shutil
-        if os.path.exists('chatbot_module/intents.json') and not os.path.exists('intents.json'):
-            shutil.copy('chatbot_module/intents.json', 'intents.json')
+        CHATBOT_INTENTS = os.path.join('chatbot_module', 'intents.json')
+        INTENTS_FILE = 'intents.json'
+        
+        if os.path.exists(CHATBOT_INTENTS) and not os.path.exists(INTENTS_FILE):
+            shutil.copy(CHATBOT_INTENTS, INTENTS_FILE)
             print_info("Copied intents.json to current directory")
         
-        if os.path.exists('intents.json'):
-            bot = RizBot('intents.json')
+        if os.path.exists(INTENTS_FILE):
+            bot = RizBot(INTENTS_FILE)
             print_success("Successfully initialized RizBot instance")
             
             # Test a simple query
